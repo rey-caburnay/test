@@ -15,10 +15,19 @@ public class Fibonacci {
 	        } 
 	        return b; 
 	    } 
+	 
+	   static int recurfib(int n) {
+		   System.out.println("recursive call:" + n);
+		   if (n < 2) {
+			   return n;
+		   }
+		   return recurfib(n-1) + recurfib(n-2);
+	   }
 	  
 	    public static void main (String args[]) 
 	    { 
 	        int n = 9; 
 	        System.out.println(fib(n)); 
+	        System.out.println(recurfib(n)); 
 	    } 
 }
